@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Progressive Web App example">
+    <meta name="theme-color" content="#4A90E2">
+
+    <title>My PWA</title>
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- iOS specific meta tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="My PWA">
+    <link rel="apple-touch-icon" href="assets/icons/icon-192x192.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/icons/icon-192x192.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 My Progressive Web App</h1>
+            <p class="subtitle">A modern PWA example</p>
+        </header>
+
+        <main>
+            <section class="card">
+                <h2>Welcome!</h2>
+                <p>This is a fully functional Progressive Web App that can be installed on your device and works offline.</p>
+            </section>
+
+            <section class="card">
+                <h3>PWA Features</h3>
+                <ul class="features-list">
+                    <li>✅ Installable on any device</li>
+                    <li>✅ Works offline with service worker</li>
+                    <li>✅ Fast loading with caching</li>
+                    <li>✅ Responsive design</li>
+                    <li>✅ App-like experience</li>
+                </ul>
+            </section>
+
+            <section class="card">
+                <h3>Status</h3>
+                <div class="status-item">
+                    <span>Connection:</span>
+                    <span id="connection-status" class="status-value">Online</span>
+                </div>
+                <div class="status-item">
+                    <span>Service Worker:</span>
+                    <span id="sw-status" class="status-value">Checking...</span>
+                </div>
+                <div class="status-item">
+                    <span>Install Status:</span>
+                    <span id="install-status" class="status-value">Not Installed</span>
+                </div>
+            </section>
+
+            <section class="card actions">
+                <button id="install-button" class="btn btn-primary" style="display: none;">
+                    Install App
+                </button>
+                <button id="notification-button" class="btn btn-secondary">
+                    Enable Notifications
+                </button>
+            </section>
+
+            <section class="card">
+                <h3>Try It Out</h3>
+                <p>Add some notes that will be saved locally:</p>
+                <textarea id="notes-input" placeholder="Type your notes here..." rows="4"></textarea>
+                <button id="save-notes" class="btn btn-primary">Save Notes</button>
+                <div id="saved-notes" class="saved-notes"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Built with ❤️ as a PWA | <a href="https://github.com" target="_blank">View on GitHub</a></p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+</body>
+</html>
